@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CreatePost from "./Components/CreatePost";
+import CreateUser from "./Components/CreateUser";
+import EditPost from "./Components/EditPost";
 
-function App() {
+import Header from "./Components/Header";
+import PostList from "./Components/PostList";
+
+
+function App () {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<PostList />} />
+          <Route path="/post/create" element={<CreatePost />} />
+          <Route path="/user/create" element={<CreateUser />} />
+          <Route path="/post/edit/:id" element={<EditPost />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
