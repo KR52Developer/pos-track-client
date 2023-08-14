@@ -56,7 +56,7 @@ const CreatePost = () => {
         };
 
         axios
-            .post("https://tough-slug-train.cyclic.cloud/v1/posts/create", newPost)
+            .post("https://tough-slug-train.cyclic.cloud/api/v1/posts/create", newPost)
             .then((res) => {
                 alert("New post created successfully");
                 navigate("/");
