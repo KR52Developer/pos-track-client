@@ -11,7 +11,7 @@ const CreateUser = () => {
         e.preventDefault();
         // axios.post("http:localhost:5000/api/v1/users/create", { username: user, })
         axios
-            .post("https://tough-slug-train.cyclic.cloud/api/v1/users/create", {
+            .post("https://worried-worm-frock.cyclic.app/api/v1/users/create", {
                 username: user,
             })
             .then(() => {

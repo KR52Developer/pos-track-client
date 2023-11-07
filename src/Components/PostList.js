@@ -8,7 +8,7 @@ const PostList = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        axios.get("https://tough-slug-train.cyclic.cloud/api/v1/posts")
+        axios.get("https://worried-worm-frock.cyclic.app/api/v1/posts")
             .then((res) => setPosts(res.data.posts))
             .catch((error) => console.log(error));
     }, []);
@@ -17,7 +17,7 @@ const PostList = () => {
 
     const deletePost = (id) => {
         if (window.confirm("Are sure to delete the post?")) {
-            axios.delete(`https://tough-slug-train.cyclic.cloud/api/v1/posts/${id}`)
+            axios.delete(`https://worried-worm-frock.cyclic.app/api/v1/posts/${id}`)
                 .then((res) => {
                     alert("Post Deleted Successfully");
                     console.log(res.data);

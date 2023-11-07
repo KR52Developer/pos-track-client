@@ -18,7 +18,7 @@ const EditPost = () => {
     });
 
     useEffect(() => {
-        axios.get(`https://tough-slug-train.cyclic.cloud/api/v1/posts/${id}`)
+        axios.get(`https://worried-worm-frock.cyclic.app/api/v1/posts/${id}`)
             .then((res) => {
                 setPost((preValue) => {
                     return {
@@ -56,7 +56,7 @@ const EditPost = () => {
         };
 
         axios
-            .put(`https://tough-slug-train.cyclic.cloud/api/v1/posts/${id}`, newPost)
+            .put(`https://worried-worm-frock.cyclic.app/api/v1/posts/${id}`, newPost)
             .then((res) => {
                 alert("Post updated successfully");
                 navigate("/");

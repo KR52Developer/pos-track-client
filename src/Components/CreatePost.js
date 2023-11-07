@@ -17,7 +17,7 @@ const CreatePost = () => {
     });
 
     useEffect(() => {
-        axios.get("https://tough-slug-train.cyclic.cloud/api/v1/users")
+        axios.get("https://worried-worm-frock.cyclic.app/api/v1/users")
             .then((res) => {
                 setPost((preValue) => {
                     return {
@@ -56,7 +56,7 @@ const CreatePost = () => {
         };
 
         axios
-            .post("https://tough-slug-train.cyclic.cloud/api/v1/posts/create", newPost)
+            .post("https://worried-worm-frock.cyclic.app/api/v1/posts/create", newPost)
             .then((res) => {
                 alert("New post created successfully");
                 navigate("/");
